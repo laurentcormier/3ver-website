@@ -450,42 +450,37 @@ blockquote{
 
 /* ---------- PARTNERS ---------- */
 
-.partners{
+.partner {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-
-    gap:25px;
-
-    margin-top:45px;
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.partners div{
-
-    background:white;
-
-    border-radius:12px;
-
-    padding:35px;
-
-    text-align:center;
-
-    font-weight:bold;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-    transition:.3s;
-
+.partner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
-.partners div:hover{
+.partner p {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
 
-    background:var(--primary);
-
-    color:white;
-
+.partner img {
+    max-width: 140px;
+    max-height: 90px;
+    object-fit: contain;
+    margin: 10px;
 }
 
 /* ---------- NEWS ---------- */
@@ -648,8 +643,8 @@ footer p{
 /* ---------- Image Community working together ---------- */
 
 .community-image img{
-    width:60%;
-    max-width:500px;
+    width:90%;
+    max-width:1000px;
     height:auto;
     border-radius:16px;
     box-shadow:0 10px 30px rgba(0,0,0,0.15);
@@ -731,4 +726,239 @@ footer p{
     position: relative;
     z-index: 1;
     color: black;
+}
+
+.hero-subtitle {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+    max-width: 900px;
+    margin: 2rem auto 0;
+}
+/* ---------- Press- Glass Days ---------- */
+
+.press-list {
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+.press-list li {
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.press-list a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* ---------- Hero small - ANR 3VER ---------- */
+
+.highlight {
+    background: rgba(255,255,255,0.7);
+    padding: 30px;
+    margin: 40px 0;
+    border-left: 5px solid #5c8d89;
+    border-radius: 10px;
+}
+
+.highlight h3 {
+    margin-top: 0;
+}
+
+.objectives {
+    margin: 40px 0;
+    padding: 25px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.objectives li {
+    margin-bottom: 10px;
+}
+
+/* ---------- Glass Days 2022 ---------- */
+
+.participants-grid {
+    display: grid;
+    gap: 35px;
+    margin-top: 30px;
+}
+
+
+.participant-category {
+    padding-bottom: 10px;
+}
+
+
+.participant-category h3 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+
+.participant-category ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+
+.participant-category li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+
+.association-text {
+    margin-top: 40px;
+    font-style: italic;
+}
+
+
+@media (min-width: 900px) {
+
+.participants-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+}
+
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+
+.gallery img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+
+@media (max-width: 900px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery img {
+        height: auto;
+    }
+
+}
+.workshop-conclusion {
+    margin-top: 60px;
+    line-height: 1.7;
+}
+
+.glass-day-2022-main-image img{
+    width:90%;
+    max-width:1000px;
+    height:auto;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+.conference-resources {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.conference-resources a {
+    font-weight: 600;
+}
+
+/* ---------- Glass Days 2023 ---------- */
+
+.glass-day-2023-main-image img{
+    width:90%;
+    max-width:1000px;
+    height:auto;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+
+
+@media (min-width: 900px) {
+
+.participants-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+}
+
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+
+.gallery img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+
+@media (max-width: 900px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery img {
+        height: auto;
+    }
+
+}
+.gallery figure {
+    margin: 0;
+    text-align: center;
+}
+
+.gallery figcaption {
+    font-size: 0.9rem;
+    margin-top: 8px;
+    color: #555;
+    line-height: 1.4;
 }
