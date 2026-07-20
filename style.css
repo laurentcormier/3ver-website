@@ -130,18 +130,15 @@ header{
 
 }
 
-.logo{
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: inherit;
+    font-size: inherit;
+}
 
-    color:white;
-
-    font-size:2rem;
-
-    font-family:'Space Grotesk';
-
-    font-weight:bold;
-
-    letter-spacing:3px;
-
+.logo a:hover {
+    opacity: 0;
 }
 
 .nav-links{
@@ -168,116 +165,137 @@ header{
 
 }
 
-/* ---------- HERO ---------- */
+.language-switch{
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+    margin-left:2rem;
+}
 
-.hero{
-
-    height:100vh;
-
-    position:relative;
+.language-switch .lang{
 
     display:flex;
-
-    justify-content:center;
-
     align-items:center;
+    gap:0.35rem;
+    padding:0.45rem 0.9rem;
+    border:1px solid #cfd8dc;
+    border-radius:999px;
+    background:rgba(255, 255, 255, 0.775);
+    color:#555;
+    text-decoration:none;
+    font-size:0.9rem;
+    font-weight:500;
+    transition:all .25s ease;
+}
 
+.language-switch .lang:hover{
+    border-color:#2d6a8a;
+    color:#2d6a8a;
+    transform:translateY(-1px);
+}
+
+.language-switch .lang.active{
+    background:#1f3b5b;
+    border-color:#1f3b5b;
+    color:rgba(255, 255, 255, 0.775);
+}
+
+.language-switch a {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    text-decoration: none;
+    color: #777;
+    transition: color 0.25s ease;
+}
+
+.language-switch a:hover {
+    color: #2d6a8a;
+}
+
+.language-switch a.active {
+    color: #1f3b5b;
+    font-weight: 600;
+}
+
+.language-switch span {
+    color: #bbb;
+}
+/* ---------- HERO ---------- */
+
+.hero {
+    height:100vh;
+    min-height:700px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     text-align:center;
-
-    background-image:url("images/hero.jpg");
-
+    background-image:url("images/Glass-background.jpeg");
     background-size:cover;
-
     background-position:center;
-
+    background-repeat:no-repeat;
 }
 
-.overlay{
-
+.overlay {
     position:absolute;
-
-    inset:0;
-
-    background:rgba(0,0,0,.55);
-
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
 }
+
 
 .hero-content{
-
     position:relative;
-
-    z-index:10;
-
+    z-index:2;
     color:white;
-
     width:80%;
-
-    max-width:850px;
-
+    max-width:900px;
 }
 
 .hero h1{
-
+    font-size:5rem;
     color:white;
-
-    margin-bottom:20px;
-
+    margin-bottom:10px;
 }
 
 .hero h2{
-
     color:white;
-
     font-size:2.8rem;
-
+    margin-bottom:30px;
 }
 
-.hero p{
-
+.hero-text {
     font-size:1.3rem;
-
-    margin:35px 0;
-
+    line-height:1.7;
 }
 
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
 
-    background-image: url("images/Glass-background.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.hero-subtitle {
+    font-size:1.1rem;
+    line-height:1.6;
+    margin-top:30px;
 }
+
+
+
 /* ---------- BUTTON ---------- */
 
 .button{
-
     display:inline-block;
-
     background:var(--secondary);
-
     color:white;
-
     padding:18px 42px;
-
     border-radius:40px;
-
     font-weight:600;
-
     transition:.3s;
-
 }
 
 .button:hover{
-
     transform:translateY(-4px);
-
     background:#d97f00;
-
 }
 
 /* ---------- SECTIONS ---------- */
@@ -706,36 +724,6 @@ footer p{
     margin-bottom: 15px;
 }
 
-/* ---------- Hero small - Glass Days ---------- */
-
-.hero.small {
-    position: relative;
-}
-
-.hero.small::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.6);
-}
-
-.hero.small .hero-content,
-.hero.small .hero-content h1,
-.hero.small .hero-content h2,
-.hero.small .hero-content p {
-    position: relative;
-    z-index: 1;
-    color: black;
-}
-
-.hero-subtitle {
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    font-weight: 700;
-    line-height: 1.4;
-    text-align: center;
-    max-width: 900px;
-    margin: 2rem auto 0;
-}
 /* ---------- Press- Glass Days ---------- */
 
 .press-list {
@@ -753,30 +741,6 @@ footer p{
     text-decoration: underline;
 }
 
-/* ---------- Hero small - ANR 3VER ---------- */
-
-.highlight {
-    background: rgba(255,255,255,0.7);
-    padding: 30px;
-    margin: 40px 0;
-    border-left: 5px solid #5c8d89;
-    border-radius: 10px;
-}
-
-.highlight h3 {
-    margin-top: 0;
-}
-
-.objectives {
-    margin: 40px 0;
-    padding: 25px;
-    background: #f5f5f5;
-    border-radius: 10px;
-}
-
-.objectives li {
-    margin-bottom: 10px;
-}
 
 /* ---------- Glass Days 2022 ---------- */
 
@@ -961,4 +925,188 @@ footer p{
     margin-top: 8px;
     color: #555;
     line-height: 1.4;
+}
+
+/* ========================= */
+/* Glass Days 2024 */
+/* ========================= */
+
+
+/* General text improvements */
+
+.section {
+    padding: 70px 20px;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* Highlight introduction */
+
+.highlight {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #234a6b;
+    border-left: 4px solid #8fc7d9;
+    padding-left: 20px;
+}
+
+/* ========================= */
+/* Lecture and workshop cards */
+/* ========================= */
+
+.cards {
+
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    color: #1f3b5b;
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+.card a {
+    display: block;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius:12px 12px 0 0;
+    margin-bottom:20px;
+    cursor: zoom-in;
+}
+
+.card img:hover {
+    transform: scale(1.04);
+}
+
+/* ========================= */
+/* Main image */
+/* ========================= */
+
+.glass-day-2024-main-image {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.large-image {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.15);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666;
+}
+
+/* ========================= */
+/* Buttons */
+/* ========================= */
+
+.button {
+    display: inline-block;
+    background: #1f3b5b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #345f85;
+}
+
+/* ========================= */
+/* Footer */
+/* ========================= */
+
+footer {
+    background: #1f3b5b;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.gallerySwiper{
+    width:100%;
+    margin-top:40px;
+}
+
+.swiper-slide{
+    text-align:center;
+}
+
+.swiper-slide img{
+    width:100%;
+    max-height:650px;
+    object-fit:contain;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.swiper-slide p{
+    margin-top:15px;
+    font-style:italic;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    background: rgba(0,0,0,0.45);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(0,0,0,0.75);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 24px;
+    font-weight: bold;
 }
