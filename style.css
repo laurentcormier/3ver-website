@@ -1110,3 +1110,59 @@ footer {
     font-size: 24px;
     font-weight: bold;
 }
+
+/* ========================= */
+/* Glass Days 2025 */
+/* ========================= */
+.glass-day-2025-main-image {
+    text-align: center;
+}
+
+.glass-day-2025-main-image .large-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 60%;
+    height: auto;
+}
+
+.glass-day-2025-main-image figcaption {
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.cards-2025 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.card-2025 {
+    background: #ffffff;
+    border-left: 5px solid #2b7bbb;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-2025:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.card-2025 h3 {
+    margin: 0 0 8px 0;
+    color: #1d3557;
+    font-size: 1.05rem;
+    line-height: 1.25;
+}
+
+.speaker {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
